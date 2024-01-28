@@ -1,0 +1,14 @@
+{
+    "builds":[
+    {
+        "src":"LIBRARY_MANAGEMENT/app.py",
+        "use":"@vercel/python"
+    }
+    ],
+    "routes":[
+    {
+        "src":"/(.*)"
+        "dest": "LIBRARY_MANAGEMENT/app.py"
+    }
+    ]
+}
