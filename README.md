@@ -1,4 +1,16 @@
 # Library-App
+# Deployment link 
+[My site](http://pythonguru.pythonanywhere.com/)
+
+# ADD Book
+![](book.png)
+
+# ADD MEMBER
+![](member.png)
+
+# ISSUE A BOOK
+![](issue.png)
+
 # Frappe/Flask/Django test for entry level engineers
 # Why this test?
 
@@ -29,14 +41,3 @@ Charge Rent Fee on Book Returns: The system calculates and charges rent fees whe
 
 Debt Limit: The system ensures that a member's outstanding debt does not exceed KES.500, helping in debt management.
 
-# Deployment link 
-[My site](http://pythonguru.pythonanywhere.com/)
-
-# ADD Book
-![](book.png)
-
-# ADD MEMBER
-![](member.png)
-
-# ISSUE A BOOK
-![](issue.png)
