@@ -39,7 +39,4 @@ Debt Limit: The system ensures that a member's outstanding debt does not exceed 
 ![](member.png)
 
 # ISSUE A BOOK
-[](issue.png)
-# ADD A BOOK
-![Alt text](C:\Users\musa\Desktop\Library-App\static\images/add_book.png)
-
+![](issue.png)
