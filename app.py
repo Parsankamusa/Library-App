@@ -28,6 +28,8 @@ class Book(db.Model):
 with app.app_context():
     db.create_all()
 
+# ...
+
 # CRUD operations for Books
 @app.route('/books', methods=['GET', 'POST'])
 def books_page():
@@ -45,16 +47,20 @@ def books_page():
 
     books = Book.query.all()
     return render_template('books.html', books=books)
+# ...
 
 # Member model
 class Member(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
+    Email = db.Column(db.String(100), nullable=False)
+    Phone_number = db.Column(db.Integer)
     outstanding_debt = db.Column(db.Float, default=0.0)
 
-# Create the database tables
+# # Create the database tables
 with app.app_context():
     db.create_all()
+
 
 
 # CRUD operations for Members
@@ -63,8 +69,10 @@ def members_page():
     if request.method == 'POST':
         # Handle form submission for adding a member
         name = request.form.get('name')
+        Email = request.form.get('Email')
+        Phone_number= request.form.get('Phone number')
 
-        new_member = Member(name=name)
+        new_member = Member(name=name, Email=Email, Phone_number= Phone_number)
         db.session.add(new_member)
         db.session.commit()
 
@@ -140,6 +148,9 @@ def issue_book():
     return render_template('issue_book.html', books=books, members=members)
 
 
+# Issue a book return from a member
+# ...
+
 # Return a book from a member
 @app.route('/return_book', methods=['GET', 'POST'])
 def return_book():
@@ -154,7 +165,11 @@ def return_book():
             # Update return date and calculate rent fee
             transaction.return_date = datetime.utcnow()
 
-            
+            # Calculate rent fee based on your logic
+            # For example, you can calculate the difference in days and charge a fee per day
+            # rent_fee_per_day = 5
+            # days_difference = (transaction.return_date - transaction.issue_date).days
+            # transaction.rent_fee = rent_fee_per_day * days_difference
 
             db.session.commit()
 

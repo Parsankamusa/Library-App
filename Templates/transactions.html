@@ -1,19 +1,31 @@
 {% extends 'base.html' %}
 
+{% block title %}Transactions{% endblock %}
+
 {% block content %}
     <h2>Transactions</h2>
-    <ul>
-        {% for transaction in transactions %}
-            <li>
-                Book: {{ transaction.book.title }} by {{ transaction.book.author }},
-                Member: {{ transaction.member.name }},
-                Issue Date: {{ transaction.issue_date }},
-                Return Date: {{ transaction.return_date }},
-                Rent Fee: KES {{ transaction.rent_fee }}
-            </li>
-        {% endfor %}
-    </ul>
-
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>Member</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+                <th>Rent Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.book.title }}</td>
+                    <td>{{ transaction.member.name }}</td>
+                    <td>{{ transaction.issue_date }}</td>
+                    <td>{{ transaction.return_date }}</td>
+                    <td>{{ transaction.rent_fee }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     <h3>Add a new transaction:</h3>
     <form method="post" action="{{ url_for('transactions_page') }}">
         <label for="book_id">Book:</label>

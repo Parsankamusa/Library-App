@@ -1,0 +1,78 @@
+/* Global Styles */
+body {
+    background-color: #cddff0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: white;
+}
+
+/* Table Styles */
+.table {
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Add Book Modal Styles */
+#addBookModal .modal-content {
+    border-radius: 10px;
+}
+
+/* Add Member Modal Styles */
+#addMemberModal .modal-content {
+    border-radius: 10px;
+}
+
+/* Transactions Table Styles */
+#transactionsTable {
+    margin-top: 20px;
+}
+
+/* Issue Book and Return Book Form Styles */
+.issue-return-form {
+    margin-top: 20px;
+}
+
+/* Fancy Styles for Home Page */
+.home-content {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #6c757d;
+}
